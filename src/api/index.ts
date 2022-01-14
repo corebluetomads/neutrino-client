@@ -1,5 +1,4 @@
 import axios from 'axios'
-import config from './config'
 import AuthApi from './endpoints/auth/auth'
 import ServerAPI from './endpoints/server/server'
 
