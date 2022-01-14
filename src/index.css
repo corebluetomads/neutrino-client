@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap') format('woff2');
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6, p, span {
+    font-family: 'roboto'
+  }
+}
+
+.dashboard-layout {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 100px 325px 1fr;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

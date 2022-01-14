@@ -1,28 +1,21 @@
-interface ILogin {
+export interface ILoginRequest {
   email: string,
   password: string
 }
 
-interface IForgotPassword {
+export interface IForgotPasswordRequest {
   email: string
 }
 
-interface IResetPassword {
+export interface IResetPasswordRequest {
   password: string,
   confirm_password: string
 }
 
-interface IRegister {
+export interface IRegisterRequest {
   email: string,
   password: string,
   username: string,
   date_of_birth: string,
   password_confirmation: string
-}
-
-export type {
-	ILogin,
-	IRegister,
-	IResetPassword,
-	IForgotPassword,
 }

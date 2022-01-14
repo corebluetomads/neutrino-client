@@ -6,3 +6,5 @@ export interface IErrorBase {
 export interface IResponseError extends IErrorBase {
   status: string | number | unknown
 }
+
+export {}

@@ -18,10 +18,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "rootDir": "./",
+    "baseUrl": "./src",
+    "paths": {
+      "src/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
     "src",
-    "postcss.config.ts"
+    "postcss.config.js"
   ]
 }

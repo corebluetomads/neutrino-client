@@ -1,5 +1,6 @@
 import { AxiosInstance } from 'axios'
-import { Server } from '../../../types/Server'
+import { Server } from 'types/Server'
+import { IServerRequest } from './interfaces'
 
 export default class ServerAPI {
 	protected readonly http: AxiosInstance

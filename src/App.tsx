@@ -1,10 +1,9 @@
-import React from "react"
-import "./App.css"
+import React from 'react'
 
-function App() {
+function App({ children }: { children: React.ReactNode }) {
 	return (
-		<div className="App">
-      
+		<div>
+			{children}
 		</div>
 	)
 }
