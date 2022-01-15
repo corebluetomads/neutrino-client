@@ -1,7 +1,7 @@
 import axios from 'axios'
-import AuthApi from './endpoints/auth/auth'
-import ServerAPI from './endpoints/server/server'
-
+import AuthApi from './endpoints/auth'
+import ServerAPI from './endpoints/server'
+ 
 const http = axios.create({
 	baseURL: 'http://localhost'
 })

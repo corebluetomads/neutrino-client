@@ -1,12 +1,12 @@
 import axios from 'axios'
+import Form from 'components/Form'
+import Button from 'components/Button'
+import { useNavigate } from 'react-router-dom'
 import React, { ChangeEvent, useState } from 'react'
-import { IForgotPasswordRequest } from 'api/endpoints/auth/interfaces'
-import { IResponseError } from 'api/endpoints/error/interfaces'
+import { IResponseError } from 'api/endpoints/error'
 import { displayValidationError } from 'helpers/Validation'
 import { useForgotPasswordMutation } from 'hooks/queries/auth/auth'
-import Button from 'components/Button'
-import Form from 'components/Form'
-import { useNavigate } from 'react-router-dom'
+import { IForgotPasswordRequest } from 'api/endpoints/auth/interfaces/request'
 
 const ForgotPasswordForm = (): JSX.Element => {
 	const navigate = useNavigate()

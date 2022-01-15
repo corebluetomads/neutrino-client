@@ -1,4 +1,3 @@
-
 export interface IErrorBase {
   messages: object | unknown
 }

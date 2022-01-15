@@ -1,13 +1,13 @@
 import axios from 'axios'
-import React, { ChangeEvent, useState } from 'react'
-import { ILoginRequest } from 'api/endpoints/auth/interfaces'
-import { IResponseError } from 'api/endpoints/error/interfaces'
-import { displayValidationError } from 'helpers/Validation'
-import { useLoginMutation } from 'hooks/queries/auth/auth'
-import Button from 'components/Button'
 import Form from 'components/Form'
+import Button from 'components/Button'
 import InlineLink from 'components/InlineLink'
 import { useNavigate } from 'react-router-dom'
+import React, { ChangeEvent, useState } from 'react'
+import { IResponseError } from 'api/endpoints/error'
+import { useLoginMutation } from 'hooks/queries/auth/auth'
+import { displayValidationError } from 'helpers/Validation'
+import { ILoginRequest } from 'api/endpoints/auth/interfaces/request'
 
 const LoginForm = (): JSX.Element => {
 	const navigate = useNavigate()

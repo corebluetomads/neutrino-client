@@ -1,8 +1,8 @@
 import Api from 'api'
 import { Server } from 'types/Server'
-import { UseMutationOptions, useMutation, UseQueryOptions, useQuery, QueryKey } from 'react-query'
 import { serverQueryKeys } from 'hooks/queries/server/keys'
-import { IServerRequest } from 'api/endpoints/server/interfaces'
+import { ICreateServerRequest } from 'api/endpoints/server/interfaces/request'
+import { UseMutationOptions, useMutation, UseQueryOptions, useQuery, QueryKey } from 'react-query'
 
 
 // Queries
@@ -15,6 +15,6 @@ export const useGetServersQuery = (options?: Omit<UseQueryOptions<Server[], unkn
 // Mutations
 
 
-export const useCreateServerMutation = (body: IServerRequest, options?: UseMutationOptions) => {
+export const useCreateServerMutation = (body: ICreateServerRequest, options?: UseMutationOptions) => {
 	return useMutation(serverQueryKeys.detail(), () => Api.server.createServer(body), options)
 }

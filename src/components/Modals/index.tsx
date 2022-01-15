@@ -4,11 +4,13 @@ import ModalHeader from 'components/Modals/header'
 import ModalContent from 'components/Modals/content'
 
 const Modal = ({
-	children,
-	onClose,
 	isOpen,
+	onClose,
+	children,
+	container = 'max-w-[451px]'
 }: {
-  isOpen: boolean
+	isOpen: boolean
+	container?: string,
   onClose: () => void,
   children: React.ReactNode,
 }) => {
@@ -18,10 +20,10 @@ const Modal = ({
 				<div className="flex items-center justify-center min-h-screen">
 					<Transition.Child
 						as={Fragment}
-						enter="transition duration-300 ease-out"
+						enter="transition duration-100 ease-out"
 						enterFrom="transform scale-95 opacity-0"
 						enterTo="transform scale-100 opacity-100"
-						leave="transition duration-150 ease-out"
+						leave="transition duration-300 ease-out"
 						leaveFrom="transform scale-100 opacity-100"
 						leaveTo="transform scale-95 opacity-0"
 					>
@@ -33,12 +35,14 @@ const Modal = ({
 						enter="transition duration-150 ease-out"
 						enterFrom="transform scale-95 opacity-0"
 						enterTo="transform scale-100 opacity-100"
-						leave="transition duration-150 ease-out"
+						leave="transition duration-300 ease-out"
 						leaveFrom="transform scale-100 opacity-100"
 						leaveTo="transform scale-95 opacity-0"
 					>
-						<div className="relative w-full max-w-sm mx-auto rounded-md bg-shark">
-							{children}
+						<div className={`relative w-full mx-auto rounded-md bg-shark ${container}`}>
+							<div className="px-7 py-[18px]">
+								{children}
+							</div>
 						</div>
 					</Transition.Child>
 				</div>

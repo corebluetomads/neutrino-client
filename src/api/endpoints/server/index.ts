@@ -1,6 +1,6 @@
 import { AxiosInstance } from 'axios'
 import { Server } from 'types/Server'
-import { IServerRequest } from './interfaces'
+import { ICreateServerRequest } from './interfaces/request'
 
 export default class ServerAPI {
 	protected readonly http: AxiosInstance
@@ -18,7 +18,7 @@ export default class ServerAPI {
    * 
    * @returns {Promise<Server>}
    */
-	async createServer(body: IServerRequest): Promise<Server> {
+	async createServer(body: ICreateServerRequest): Promise<Server> {
 		return await this.http.post<Server>('api/server', body)
 			.then((response) => response.data)
 	}

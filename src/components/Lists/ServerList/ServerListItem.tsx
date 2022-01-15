@@ -1,9 +1,9 @@
 import React from 'react'
 
 const ServerListItem = ({
-	isActive,
 	setSelected,
 	thumbnailLink,
+	isActive = false,
 }: {
   isActive: boolean,
   setSelected: () => void,
@@ -25,10 +25,6 @@ const ServerListItem = ({
 			</div>
 		</li>
 	)
-}
-
-ServerListItem.defaultProps = {
-	isActive: false
 }
 
 export default ServerListItem

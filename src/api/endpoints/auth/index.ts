@@ -1,6 +1,6 @@
 import { User } from '../../../types/User'
 import { AxiosResponse, AxiosInstance } from 'axios'
-import { IForgotPasswordRequest, ILoginRequest, IRegisterRequest, IResetPasswordRequest } from './interfaces'
+import { IForgotPasswordRequest, ILoginRequest, IRegisterRequest, IResetPasswordRequest } from './interfaces/request'
 
 export default class AuthApi {
 	protected readonly http: AxiosInstance

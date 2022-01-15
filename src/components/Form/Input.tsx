@@ -1,19 +1,19 @@
 import React, { forwardRef } from 'react'
 
 type InputProps = {
+  id: string,
   value?: string,
   className?: string,
-  id: string | undefined,
-  type?: 'text' | 'password' | 'email' | undefined,
+  type?: 'text' | 'password' | 'email',
   onChange?: React.ChangeEventHandler<HTMLInputElement>
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(function Input ({
 	id,
-	type = 'text',
 	value,
 	onChange,
 	className,
+	type = 'text',
 }: InputProps, ref) {
 	return (
 		<div className="w-full">
