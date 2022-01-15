@@ -9,7 +9,7 @@ const ServerSidebar = (): JSX.Element => {
 	const [selectedServerId, setSelectedServerId] = useState<number | undefined>(undefined)
 
 	const { data: servers } = useGetServersQuery()
-
+  
 	return (
 		<div className="h-full border-r-2 border-mirage bg-shark">
 			<div className="h-full py-[30px] px-[18px]">

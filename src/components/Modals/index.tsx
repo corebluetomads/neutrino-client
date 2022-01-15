@@ -7,7 +7,7 @@ const Modal = ({
 	isOpen,
 	onClose,
 	children,
-	container = 'max-w-[451px]'
+	container = 'max-w-[499px]'
 }: {
 	isOpen: boolean
 	container?: string,
@@ -39,8 +39,8 @@ const Modal = ({
 						leaveFrom="transform scale-100 opacity-100"
 						leaveTo="transform scale-95 opacity-0"
 					>
-						<div className={`relative w-full mx-auto rounded-md bg-shark ${container}`}>
-							<div className="px-7 py-[18px]">
+						<div className={`mx-auto px-6 relative w-full ${container}`}>
+							<div className={'rounded-md bg-shark shadow-md'}>
 								{children}
 							</div>
 						</div>
